@@ -4,7 +4,7 @@ Plugin Name: MM-email2image
 Plugin URI: http://www.mmilan.com/mm-email2image
 Description: Mask an e-mail address (or any part of a text) and convert it to image
 Author: Milan Milosevic
-Version: 0.1.1
+Version: 0.1.2
 License: GPL v3 - http://www.gnu.org/licenses/
 
 */
@@ -20,7 +20,7 @@ function mm_email2image($attr, $content) {
 	$enc_content = mm_encrypt($content, $key);
 
 	get_currentuserinfo();
-	$image = '<img style="vertical-align: bottom" src="'.$pluginURL.'e2i.php?string='.$enc_content.'&text='.base64_encode($key).'" />';
+	$image = '<img style="vertical-align: bottom" src="'.$pluginURL.'e2i.php?string='.$enc_content.'&text='.$key.'" />';
 
 	switch ($type) {
 		case 'admin':
@@ -46,7 +46,8 @@ function mm_encrypt($string, $key) {
 		$result .= $char;
 	}
 
-	return base64_encode($result);
+	$resultURL = base64_encode($result);
+	return strtr($resultURL, '+/=', '-_,');
 }
 
 function mm_random_e2i_key() {

@@ -1,6 +1,6 @@
 <?php
 
-$key = base64_decode($_GET['text']);
+$key = $_GET['text'];
 $enc_string = $_GET['string'];
 $string = mm_decrypt($enc_string, $key);
 
@@ -11,7 +11,7 @@ $height = imagefontheight($font_size);
 $img = imagecreate($width,$height);
 
 $bg    = imagecolorallocate($img, 255, 0, 0);
-$color = imagecolorallocate($img, 0, 0, 0);
+$color = imagecolorallocate($img, 255, 255, 255);
 imagecolortransparent($img, $bg);
 
 $len = strlen($string);
@@ -31,7 +31,11 @@ imagedestroy($img);
 
 function mm_decrypt($string, $key) {
 	$result = '';
-	$string = base64_decode($string);
+	$string64url = strtr($string, '-_,', '+/=');
+	$string = base64_decode($string64url);
+
+    $base64url = strtr($plainText, '-_,', '+/=');
+    $base64 = base64_decode($base64url);
 
 	for($i=0; $i<strlen($string); $i++) {
 		$char = substr($string, $i, 1);

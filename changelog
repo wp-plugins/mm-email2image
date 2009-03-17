@@ -1,4 +1,8 @@
 
+2009-03-12 0.1.2  Milan Milosevic
+
+	Bugfix: problems in encryption solved
+
 2009-03-12 0.1.1  Milan Milosevic
 
 	Bugfix: added encryption of text tagged for conversion 
