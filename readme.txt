@@ -4,7 +4,7 @@ Donate link: http://www.mmilan.com/
 Tags: email, spam, protect, image, link
 Requires at least: 2.6
 Tested up to: 2.7.1
-Stable tag: 0.1
+Stable tag: 0.1.1
 
 Add new shortcode whisc can be used to convert email or any part of text to image
 
