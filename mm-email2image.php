@@ -5,7 +5,7 @@ Plugin URI: http://www.mmilan.com/mm-email2image
 Description: Mask an e-mail address (or any part of a text) and convert it to image
 Author: Milan Milosevic
 Author URI: http://www.mmilan.com/
-Version: 0.2.1
+Version: 0.2.2
 License: GPL v3 - http://www.gnu.org/licenses/
 
     Copyright 2009  Milan Milosevic  (email : mm@mmilan.com)

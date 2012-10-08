@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: mmilan81
-Donate link: http://www.mmilan.com/
+Donate link: http://www.svetnauke.org/
 Tags: email, spam, protect, image, link, screen, scrape
 Requires at least: 2.6
-Tested up to: 2.9
-Stable tag: 0.2.1
+Tested up to: 3.4.2
+Stable tag: 0.2.2
 
 Add new shortcode which can be used to convert email or any part of text to image
 
@@ -25,6 +25,9 @@ Possible values:
     * trans="...": transparent background, YES - NO
 
 Changelog:
+
+	2012-10-09: version 0.2.2
+		Bugfix & compatibility: Wordpress 3.4.2
 
 	2009-12-25, version 0.2.1
 		Bugfix: Wordpress 2.9
