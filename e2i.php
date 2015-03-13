@@ -74,9 +74,6 @@ function mm_decrypt($string, $key) {
 	$string64url = strtr($string, '-_,', '+/=');
 	$string = base64_decode($string64url);
 
-    $base64url = strtr($plainText, '-_,', '+/=');
-    $base64 = base64_decode($base64url);
-
 	for($i=0; $i<strlen($string); $i++) {
 		$char = substr($string, $i, 1);
 		$keychar = substr($key, ($i % strlen($key))-1, 1);

@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: MM-email2image
-Plugin URI: http://www.mmilan.com/mm-email2image
+Plugin URI: http://www.svetnauke.org/mm-email2image
 Description: Mask an e-mail address (or any part of a text) and convert it to image
 Author: Milan Milosevic
-Author URI: http://www.mmilan.com/
-Version: 0.2.2
+Author URI: http://www.svetnauke.org/
+Version: 0.2.5
 License: GPL v3 - http://www.gnu.org/licenses/
 
     Copyright 2009  Milan Milosevic  (email : mm@mmilan.com)
@@ -28,11 +28,11 @@ License: GPL v3 - http://www.gnu.org/licenses/
 
 function mm_email2image($attr, $content) {
 
-	$type = $attr['type'];
-	$color = $attr['color'];
-	$size = $attr['size'];
-	$bgcolor = $attr['bgcolor'];
-	$trans = $attr['trans'];
+	if (isset($attr['type'])) $type = $attr['type'];
+	if (isset($attr['color'])) $color = $attr['color'];
+	if (isset($attr['size'])) $size = $attr['size'];
+	if (isset($attr['bgcolor'])) $bgcolor = $attr['bgcolor'];
+	if (isset($attr['trans'])) $trans = $attr['trans'];
 	
 	$pluginURL = get_bloginfo('url')."/wp-content/plugins/mm-email2image/";	
 	global $current_user;

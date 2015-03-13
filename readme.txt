@@ -3,8 +3,8 @@ Contributors: mmilan81
 Donate link: http://www.svetnauke.org/
 Tags: email, spam, protect, image, link, screen, scrape
 Requires at least: 2.6
-Tested up to: 3.4.2
-Stable tag: 0.2.2
+Tested up to: 4.1.1
+Stable tag: 0.2.5
 
 Add new shortcode which can be used to convert email or any part of text to image
 
@@ -26,6 +26,9 @@ Possible values:
 
 Changelog:
 
+	2015-03-13: version 0.2.5
+		Bugfix & compatibility: Wordpress 4.1.1
+	
 	2012-10-09: version 0.2.2
 		Bugfix & compatibility: Wordpress 3.4.2
 
